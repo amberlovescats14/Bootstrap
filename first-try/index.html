@@ -76,18 +76,25 @@
       </ul>
     </div>
   </nav>
-  <div class="container-fluid mh-100">
-    <div class="row">
+  <div class="container-fluid mh-1
+  <div class="clearify-lg"></div>
       <div class="col col-12">
-        <img src="https://images.marleylilly.com/catalog/homepage/240/1.19-free-sherpa-sale-desktop-banner.jpg" alt="">
+        <img src="https://images.marleylilly.com/catalog/homepage/240/1.19-free-sherpa-sale-desktop-banner.jpg" class="img-responsive img-thumbnail" alt="free sherpa">
       </div>
-
+      
     </div>
   </div>
   <div class="container-fluid ">
     <div class="row">
-      <div class="col col-3">
-        <img src="https://images.marleylilly.com/catalog/homepage/240/1.19-free-sherpa-sale-ads-preppy-patch-tunics.jpg" alt="" class="img-thumbnail img-responsive">
+      <div class="col col-3 box1" >
+        <img src="https://images.marleylilly.com/catalog/homepage/240/1.19-free-sherpa-sale-ads-preppy-patch-tunics.jpg" alt="" class="img-thumbnail img-responsive ">
+        
+
+        <div class="overlay">
+            <button>Shop Sale</button>
+        </div>
+        
+
       </div>
       <div class="col col-3">
             <img src="https://images.marleylilly.com/catalog/homepage/240/1.19-free-sherpa-sale-ads-duck-boots.jpg" alt="" class="img-thumbnail img-responsive">
@@ -103,6 +110,7 @@
     <div class="container-fluid ">
         <div class="row">
           <div class="col col-3">
+            
             <img src="https://images.marleylilly.com/profiles/social-media-post/catalog/social-media-post/27056/3a-clear-circle-cross-body.jpg" alt="" class="img-thumbnail img-responsive hover">
           </div>
           <div class="col col-3">
@@ -152,6 +160,10 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
   <script>
     var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 
@@ -180,6 +192,18 @@
         document.getElementById("demo").innerHTML = "EXPIRED";
       }
     }, 1000);</script>
+    <script>
+    $(document).ready(function(){
+      let overlay = $('.overlay')
+      $(overlay).hide()
+      $('.box1').hover(function(){
+        $(overlay).show()
+      })
+      $('.box1').on('mousleave', function(){
+        $(overlay).fadeOut()
+      })
+    })
+    </script>
 </body>
 
 </html>
